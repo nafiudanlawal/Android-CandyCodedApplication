@@ -88,16 +88,12 @@ public class MainActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch(item.getItemId()){
             case R.id.info:
-                startInfoActivity();
+                Intent intent = new Intent(this, InfoActivity.class);
+                startActivity(intent);
                 break;
         }
-        
-        return super.onOptionsItemSelected(item);
-    }
 
-    private void startInfoActivity() {
-        Intent intent = new Intent(this, InfoActivity.class);
-        startActivity(intent);
+        return super.onOptionsItemSelected(item);
     }
 
     private void addCandiesToDatabase(Candy[] candies) {
